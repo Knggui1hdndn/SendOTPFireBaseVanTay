@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    >
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="VerifyViewModel"
+            type="com.example.sendotpfirebase.VerifyViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="50dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập Số Điện Thoại"
+            android:inputType="number"
+            android:text="@={VerifyViewModel.soDT}"
+
+            app:error="@{!VerifyViewModel.checkSDT  ? null : `Số điện thoại không bỏ trống`}" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="50dp"
+            android:hint="Nhập mã otp"
+            android:inputType="number"
+            android:text="@={VerifyViewModel.otp}"
+            android:visibility="@{VerifyViewModel.checkLogin ?View.VISIBLE:View.GONE}"
+            app:error="@{ VerifyViewModel.checkOTP ? `Không bỏ trống OTP`  :`Mã OTP không hợp lệ` }"
+            app:showInputForEditText="@{true}" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{(view)->VerifyViewModel.sendOTP(view)}"
+            android:text="Gửi lại mã"
+            android:visibility="@{VerifyViewModel.checkLogin ?View.VISIBLE:View.GONE}" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:onClick="@{(view)->VerifyViewModel.Login(view)}"
+            android:text="@{!VerifyViewModel.checkLogin ? `SendOTP`:`Login`}" />
+    </LinearLayout>
+
+</layout>

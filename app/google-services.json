@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "252405614448",
+    "project_id": "send-cf64f",
+    "storage_bucket": "send-cf64f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:252405614448:android:3d16abce7e7eac4f0231b5",
+        "android_client_info": {
+          "package_name": "com.example.sendotpfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "252405614448-nfb3oeot8rtlo8h08788omogav8ol9l8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXq5vqPY5AzlkpxAxSSqy411cLKxLSb2Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "252405614448-nfb3oeot8rtlo8h08788omogav8ol9l8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
